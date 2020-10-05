@@ -12,7 +12,7 @@
 ###############################################################################
 ---
 
-  name: test-environment
+  name: pybind11-test-env
 
   channels:
     - bioconda
@@ -22,6 +22,9 @@
     - black=19.10b0
     - flake8=3.8.3
     - numpy=1.19.0
+    - pip=20.2.3
+    - pip:
+      - cppimport==20.8.4.2
     - pybind11=2.5.0
     - python=3.7.4
 
