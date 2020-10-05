@@ -49,10 +49,23 @@ def parse_arguments():
 def main():
     """Main body of the script."""
 
-    print(options.seed)
+    np.random.seed(int(options.seed))
+
+    # a simple function with double arguments:
+    x1 = functions.add2numbers(np.float64(10), y=-5.0)
+    print(x1, type(x1))
+    x2 = functions.add2numbers(x=1.0, y=2)
+    print(x2, type(x2))
+
+    # vectorize a simple function on a numpy array:
     arr = np.array([1, 2, 3])
     arr = arr + 1
-    print(functions.add2numbers(x=1, y=2))
+    x_array = np.random.rand(5)
+    print(x_array)
+    print(type(x_array))
+    x2_array = functions.square_a_number(x_array)
+    print(x2_array)
+    print(type(x2_array))
 
 
 ##############################################################################
