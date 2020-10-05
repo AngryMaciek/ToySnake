@@ -20,16 +20,13 @@
 #include <Eigen/LU>
 namespace py = pybind11;
 
-
 double add2numbers(double i, double j) {
     return i + j;
 }
 
-
 double square_a_number(double x) {
     return x * x;
 }
-
 
 double get00(Eigen::MatrixXd m) {
     return m(0, 0);
