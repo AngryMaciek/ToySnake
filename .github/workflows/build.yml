@@ -35,10 +35,6 @@ jobs:
           conda info -a
           conda list
 
-      - name: cmake
-        shell: bash -l {0}
-        run: cmake --version
-
       - name: test_seed_0
         shell: bash -l {0}
         run: python test.py --seed 0
