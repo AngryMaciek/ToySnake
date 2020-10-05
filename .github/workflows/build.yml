@@ -35,6 +35,13 @@ jobs:
           conda info -a
           conda list
 
-      - name: test_seed_0
+      - name: Compile the C++ code
         shell: bash -l {0}
-        run: python test.py --seed 0
+        run:   |
+        if [ "$matrix.os" == "ubuntu-20.04" ]; then
+             echo linux
+        elif [ "$matrix.os" == "macos-10.15" ]; then
+             echo mac
+        else
+             exit 1
+        fi
