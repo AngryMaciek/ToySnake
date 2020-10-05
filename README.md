@@ -4,3 +4,12 @@
 [![GitHub license](https://img.shields.io/github/license/AngryMaciek/ToySnake)](https://github.com/AngryMaciek/ToySnake/blob/master/LICENSE)
 
 # ToySnake
+*Maciej Bak  
+Swiss Institute of Bioinformatics*
+
+This repository contains a toy example on how to utilize [pybind11](https://github.com/pybind/pybind11) to interface between Python/NumPy and C++.  
+For detailed commands please take a look at the [CI build file](.github/workflows/build.yml).
+
+Based on:
+* https://pybind11.readthedocs.io/en/stable/
+* http://people.duke.edu/~ccc14/cspy/18G_C++_Python_pybind11.html
