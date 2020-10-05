@@ -16,13 +16,16 @@
 
 #include <pybind11/pybind11.h>
 
-// simple example
-int add(int i, int j) {
+namespace py = pybind11;
+
+// a simple example
+int add2numbers(int i, int j) {
     return i + j;
 }
 
 // binding C++ code to Python
 PYBIND11_MODULE(functions, m) {
-    m.doc() = "Module: example functions";
-    m.def("add", &add, "A function which adds two numbers");
+    m.doc() = "Module: example C++ functions";
+    m.def("add2numbers", &add2numbers, "A function which adds two numbers",
+      py::arg("x"), py::arg("y"));
 }

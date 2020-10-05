@@ -52,7 +52,7 @@ def main():
     print(options.seed)
     arr = np.array([1, 2, 3])
     arr = arr + 1
-    print(functions.add(1, 2))
+    print(functions.add2numbers(x=1, y=2))
 
 
 ##############################################################################
