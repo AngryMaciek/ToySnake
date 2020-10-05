@@ -1,0 +1,5 @@
+# Mac directory config
+.DS_Store
+
+# Local coverage summary
+.coverage
