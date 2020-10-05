@@ -37,4 +37,4 @@ jobs:
 
       - name: test_seed_0
         shell: bash -l {0}
-        run: python test.py --seed 0
+        run: python3 test.py --seed 0
