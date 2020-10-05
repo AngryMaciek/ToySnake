@@ -67,6 +67,8 @@ def main():
     print(x2_array)
     print(type(x2_array))
 
+    # passing and returning numpy arrays:
+
 
 ##############################################################################
 

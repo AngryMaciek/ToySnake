@@ -20,6 +20,7 @@
 
   dependencies:
     - black=19.10b0
+    - eigen=3.3.7
     - flake8=3.8.3
     - numpy=1.19.0
     - pybind11=2.5.0
