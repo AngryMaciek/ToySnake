@@ -8,7 +8,8 @@
 Swiss Institute of Bioinformatics*
 
 This repository contains a toy example on how to utilize [pybind11](https://github.com/pybind/pybind11) to interface between Python/NumPy and C++.  
-For detailed commands please take a look at the [CI build file](.github/workflows/build.yml).
+For detailed commands please take a look at the [CI build file](.github/workflows/build.yml).  
+Tested on Ubuntu and macOS with *miniconda3* installed.
 
 Based on:
 * https://pybind11.readthedocs.io/en/stable/
