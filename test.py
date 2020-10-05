@@ -68,6 +68,15 @@ def main():
     print(type(x2_array))
 
     # passing and returning numpy arrays:
+    A = np.random.rand(3,3)
+    print(A)
+    print(type(A))
+    A00 = functions.get00(A)
+    print(A00)
+    print(type(A00))
+    Ainv = functions.inverse(A)
+    print(Ainv)
+    print(type(Ainv))
 
 
 ##############################################################################

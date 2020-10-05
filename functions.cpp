@@ -31,9 +31,19 @@ double square_a_number(double x) {
 }
 
 
+double get00(Eigen::MatrixXd m) {
+    return m(0, 0);
+}
+
+Eigen::MatrixXd inverse(Eigen::MatrixXd m) {
+    return m.inverse();
+}
+
 // binding C++ code to Python
 PYBIND11_MODULE(functions, m) {
     m.doc() = "Module: example C++ functions";
     m.def("add2numbers", &add2numbers, py::arg("x"), py::arg("y"));
     m.def("square_a_number", py::vectorize(square_a_number));
+    m.def("get00", &get00);
+    m.def("inverse", &inverse);
 }
