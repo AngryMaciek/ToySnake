@@ -68,7 +68,7 @@ def main():
     print(type(x2_array))
 
     # passing and returning numpy arrays:
-    A = np.random.rand(3,3)
+    A = np.random.rand(3, 3)
     print(A)
     print(type(A))
     A00 = functions.get00(A)
