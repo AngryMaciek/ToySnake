@@ -53,6 +53,7 @@ def main():
     """Main body of the script."""
 
     print(options.seed)
+    arr = np.array([1, 2, 3])
     print(cppModule.add(1, 2))
 
 
