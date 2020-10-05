@@ -1,7 +1,9 @@
 """
 ##############################################################################
 #
-#   Test: interfacing from Python np.arrays to C++
+#   Test: interfacing from Python to C++
+#   Based on:
+#   https://github.com/pybind/pybind11
 #
 #   AUTHOR: Maciej_Bak
 #   AFFILIATION: Swiss_Institute_of_Bioinformatics
@@ -18,6 +20,10 @@ import logging
 import logging.handlers
 from argparse import ArgumentParser, RawTextHelpFormatter
 import numpy as np
+import cppimport
+
+# compile the C++ module
+cppModule = cppimport.imp("functions")
 
 
 def parse_arguments():
@@ -47,7 +53,7 @@ def main():
     """Main body of the script."""
 
     print(options.seed)
-    arr = np.array([1,2,3])
+    print(cppModule.add(1, 2))
 
 
 ##############################################################################
