@@ -43,7 +43,7 @@ jobs:
       - name: Compile the C++ code [macos]
         shell: bash -l {0}
         if: matrix.os == 'macos-10.15'
-        run: ls /usr/local/include/eigen3/ #c++ -O3 -Wall -I/usr/local/include/eigen3/ -shared -std=c++11 -undefined dynamic_lookup `python3 -m pybind11 --includes` functions.cpp -o functions`python3-config --extension-suffix`
+        run: ls /usr/ #c++ -O3 -Wall -I/usr/local/include/eigen3/ -shared -std=c++11 -undefined dynamic_lookup `python3 -m pybind11 --includes` functions.cpp -o functions`python3-config --extension-suffix`
 
       - name: Test seed=0
         shell: bash -l {0}
