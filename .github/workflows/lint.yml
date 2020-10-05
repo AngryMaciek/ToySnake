@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: 3.7
           auto-update-conda: true
-          activate-environment: test-environment
+          activate-environment: pybind11-test-env
           environment-file: environment.yml
           auto-activate-base: false
 
