@@ -37,11 +37,11 @@ jobs:
 
       - name: Compile the C++ code
         shell: bash -l {0}
-        run:   |
-        if [ "$matrix.os" == "ubuntu-20.04" ]; then
-             echo linux
-        elif [ "$matrix.os" == "macos-10.15" ]; then
-             echo mac
-        else
-             exit 1
-        fi
+        run: |
+          if [ "$matrix.os" == "ubuntu-20.04" ]; then
+              echo linux
+          elif [ "$matrix.os" == "macos-10.15" ]; then
+              echo mac
+          else
+              exit 1
+          fi
