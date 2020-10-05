@@ -1,0 +1,41 @@
+name: flake8
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Miniconda & Environment
+        uses: conda-incubator/setup-miniconda@v1
+        with:
+          python-version: 3.7
+          auto-update-conda: true
+          activate-environment: test-environment
+          environment-file: environment.yml
+          auto-activate-base: false
+
+      - name: Conda Info
+        shell: bash -l {0}
+        run: |
+          conda info -a
+          conda list
+
+      - name: Black
+        shell: bash -l {0}
+        run: black --check test.py
+
+      - name: Flake8
+        shell: bash -l {0}
+        run: flake8 --max-line-length=88 test.py
