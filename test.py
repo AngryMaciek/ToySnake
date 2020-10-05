@@ -34,10 +34,7 @@ def parse_arguments():
         "-l", "--logfile", dest="logfile", help="Store log to this file."
     )
     parser.add_argument(
-        "--seed",
-        dest="seed",
-        required=True,
-        help="Integer seed for the RNG.",
+        "--seed", dest="seed", required=True, help="Integer seed for the RNG.",
     )
     return parser
 
