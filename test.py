@@ -17,6 +17,7 @@ import time
 import logging
 import logging.handlers
 from argparse import ArgumentParser, RawTextHelpFormatter
+import numpy as np
 
 
 def parse_arguments():
@@ -46,6 +47,7 @@ def main():
     """Main body of the script."""
 
     print(options.seed)
+    arr = np.array([1,2,3])
 
 
 ##############################################################################
