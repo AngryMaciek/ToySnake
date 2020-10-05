@@ -26,6 +26,3 @@ PYBIND11_MODULE(functions, m) {
     m.doc() = "Module: example functions";
     m.def("add", &add, "A function which adds two numbers");
 }
-<%
-cfg['compiler_args'] = ['-std=c++11']
-%>

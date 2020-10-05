@@ -20,10 +20,7 @@ import logging
 import logging.handlers
 from argparse import ArgumentParser, RawTextHelpFormatter
 import numpy as np
-import cppimport
-
-# compile the C++ module
-cppModule = cppimport.imp("functions")
+import functions
 
 
 def parse_arguments():
@@ -55,7 +52,7 @@ def main():
     print(options.seed)
     arr = np.array([1, 2, 3])
     arr = arr + 1
-    print(cppModule.add(1, 2))
+    print(functions.add(1, 2))
 
 
 ##############################################################################
