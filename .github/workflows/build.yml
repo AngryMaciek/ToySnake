@@ -48,3 +48,7 @@ jobs:
       - name: Test seed=0
         shell: bash -l {0}
         run: python test.py --seed 0
+
+        - name: Test seed=1
+        shell: bash -l {0}
+        run: python test.py --seed 1
